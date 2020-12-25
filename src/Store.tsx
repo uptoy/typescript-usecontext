@@ -1,11 +1,7 @@
 import React from 'react'
 import {IState,IAction} from './interfaces'
 
-const initialState:IState = {
-    episodes:[],
-    favorites:[]
-}
-interface IState {
+const initialState:IState={
     episodes:[],
     favorites:[]
 }
