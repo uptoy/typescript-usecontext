@@ -19,7 +19,7 @@ export default function FavPage():JSX.Element{
         <React.Fragment>
             <React.Suspense fallback={<div>loading...</div>}>
                 <section className="episode-layout">
-                    <EepisodeList {...props} />
+                    <EpisodesList {...props} />
                 </section>
             </React.Suspense>
         </React.Fragment>

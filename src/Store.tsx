@@ -18,9 +18,10 @@ function reducer(state:IState,action:IAction):IState{
             return{...state,favorites:action.payload}
         default:
             return state
+    }
 }
 
 export function StoreProvider({children}:JSX.ElementChildrenAttribute):JSX.Element{
     const [state,dispatch] = React.useReducer(reducer,initialState)
-    return <Store.Provider value={{state,dispatch}}>{children}</Store.Provider>
+    return<Store.Provider value={{state,dispatch}}>{children}</Store.Provider>
 }

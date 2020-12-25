@@ -5,7 +5,7 @@ export default function App() :JSX.Element{
   const {state,dispatch} = React.useContext(Store)
 
   React.useEffect(()=>{
-    statu.episodes.length === 0 && fetchDataAction
+    state.episodes.length == 0 && fetchDataAction()
   })
 
   const fetchDataAction = async()=> {
@@ -23,6 +23,19 @@ console.log(state)
     <React.Fragment>
       <h1>aaa</h1>
       <p>iii</p>
+      <section>
+        {state.episodes.map((episode:any)=>{
+          return(
+            <section key={episode.id}>
+                <img src={episode.image.medium} alt={`aaa ${episode.name}`} />
+                <div>{episode.name}</div>
+                <section>
+                  season:{episode.season} number:{episode.number}
+                </section>
+            </section>
+          )
+        })}
+      </section>
      </React.Fragment>
   );
 }
