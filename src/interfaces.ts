@@ -11,13 +11,15 @@ export interface IAction{
 }
 
 export interface IEpisodeProps{
-    episodes:Array[IEpisode]
+    episodes:Array<IEpisode>
     store:{state:IState,dispatch:Dispatch}
     toggleFavAction:(state:IState,dispatch:Dispatch,episode:IEpisode)=>IAction
     favorites:Array<IEpisode>
 }
 
 export interface IEpisode {
+    number: string
+    season: string
     airdate:string
     airstamp:string
     airtime:string

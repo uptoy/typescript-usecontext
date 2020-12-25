@@ -1,7 +1,7 @@
 import React from 'react'
 import {Store} from './Store'
 import {IEpisodeProps} from './interfaces'
-
+import {fetchDataAction,toggleFavAction} from "./Action";
 
 const episodeList = React.lazy<any>(()=>import('./EpisodesList'))
 
@@ -24,7 +24,6 @@ export default function Homepage(){
                 <section className="episode-layout">
                     <EepisodeList {...props} />
                 </section>
-
         </React.Fragment>
     )
 }
